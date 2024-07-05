@@ -1,0 +1,217 @@
+
+            /* home page 
+            genra cards styling */
+            
+
+            .container {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 10%;
+              }
+              
+
+            
+              
+              .container .glass {
+                position: relative;
+                width: 200px;
+                height: 150px;
+                background: linear-gradient(#d9aa84 , transparent);
+                border: 1px solid rgba(255, 255, 255, 0.06);
+                box-shadow: 0 25px 25px rgba(0, 0, 0, 0.404);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: 0.5s;
+                border-radius: 10px;
+                margin: 0 -45px;
+                backdrop-filter: blur(10px);
+                transform: rotate(calc(var(--r) * 1deg));
+              }
+              
+              .container:hover .glass {
+                transform: rotate(0deg);
+                margin: 0 10px;
+              }
+              
+              .container .glass::before {
+                content: attr(data-text);
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 40px;
+                background: rgba(255, 255, 255, 0.047);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #00000088;
+
+                transform: translate(-50%, -50%) rotate(var(--r, 0deg)); /* Rotate the text */
+                font-size: 1rem; /* Adjust font size */
+                font-weight: bold; /* Font weight */
+                text-shadow: 2px 2px 4px rgba(250, 250, 250, 0.3); /* Optional: Text shadow */
+              }
+              .container .glass span {
+               width: 150px;
+               padding-bottom: 30%;
+              }
+              .name{
+                margin-top:8%;
+                font-size: 4rem; /* Adjust font size */
+                font-weight: bold; /* Font weight */
+                text-shadow: 2px 2px 4px #422e1d; /* Optional: Text shadow */
+              color: #d9aa84;
+              font-family: 'Times New Roman', Times, serif; /* Font stack for h2 */
+              
+              }
+              
+              .prg{
+                font-size: 1.5rem; /* Adjust font size */
+                font-weight: bold; /* Font weight */
+                text-shadow: 2px 2px 4px #5c412b2f; /* Optional: Text shadow */
+              color: #0000009a;
+              font-family: 'Times New Roman', Times, serif; /* Font stack for h2 */
+              margin-top: 3%;
+
+
+
+              }
+
+
+
+                  /*  the box  */
+                  .square-box {
+                    position: fixed; /* Ensure it stays in place even when scrolling */
+                    top: 0; /* Position it at the bottom */
+                    left: 0; /* Position it on the left side */
+                    width: 30%; /* Set the width of the square */
+                    height: 50%; /* Set the height of the square */
+                    background: linear-gradient(to right,#dda77c , transparent);
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a shadow */
+                    z-index: -1; /* Ensure it is displayed behind other content */
+                    border-bottom-right-radius: 500px; /* Round only the top-left corner */
+                  }
+                  
+                  .square-box2 {
+                    position: fixed; 
+                    bottom: 0; 
+                    right: 0; 
+                    width: 30%; 
+                    height: 50%;
+                    background: linear-gradient(to right,#dda77c , transparent);
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+                    z-index: -1; 
+                    border-top-left-radius: 500px; 
+                  }
+                  
+                                
+                  .square-box3 {
+                    position: fixed; 
+                    bottom: 0; 
+                    right: 0; 
+                    width: 40%; 
+                    height: 60%;
+                    background: linear-gradient(to right,#b9733a , transparent);
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+                    z-index: -1; 
+                    border-top-left-radius: 500px; 
+
+                  }
+                  .square-box4 {
+                    position: fixed; /* Ensure it stays in place even when scrolling */
+                    top: 0; /* Position it at the bottom */
+                    left: 0; /* Position it on the left side */
+                    width: 40%; /* Set the width of the square */
+                    height: 60%; /* Set the height of the square */
+                    background: linear-gradient(to right,#b9733a , transparent);
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a shadow */
+                    z-index: -1; /* Ensure it is displayed behind other content */
+                    border-bottom-right-radius: 500px; /* Round only the top-left corner */
+                  }
+
+
+
+
+                  
+
+                  .books {
+                    position: fixed;
+                    top: 0; /* Position it at the bottom */
+                    left: 0; /* Position it on the left side */
+                    z-index: -1; /* Ensure it is displayed behind other content */
+margin-left:10%;
+                    filter: drop-shadow(12px 12px 8px rgba(0, 0, 0, 0.7)); }
+
+.select{
+  font-size: 3rem; /* Adjust font size */
+  font-weight: bold; /* Font weight */
+  text-shadow: 2px 2px 4px #5c412b59; /* Optional: Text shadow */
+color: #000000c8;
+font-family: 'Times New Roman', Times, serif; /* Font stack for h2 */
+}
+
+
+            /* movies display
+                      cards */
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 450px;
+    perspective: 1000px;
+    font-family: sans-serif;
+    margin: 15%;
+  }
+  
+  .title {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+    
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid #d9aa84;
+    border-radius: 1rem;
+  }
+  
+  .flip-card-front {
+    background: linear-gradient(120deg, bisque 60%, #d9aa84 88%,
+    #d9aa84 40%, #d9aa84 48%);
+    color: #e5a571;
+  }
+  
+  .flip-card-back {
+    background: linear-gradient(120deg, #c88f60 30%, #d7ac88 88%,
+       bisque 40%, #d9aa84 78%);
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+
+
+                                            /* register /login*/
